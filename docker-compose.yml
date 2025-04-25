@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile_app
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:${SERVER_PORT}:${SERVER_PORT}"
+    deploy:
+      resources:
+        limits:
+          memory: 150M
+
+  tester:
+    build:
+      context: ./tester
+      dockerfile: Dockerfile_tester
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:${SSH_PORT}:22"
+    deploy:
+      resources:
+        limits:
+          memory: 150M
+    depends_on:
+      - app
