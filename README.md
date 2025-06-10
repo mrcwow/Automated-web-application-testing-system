@@ -26,25 +26,25 @@ docker compose up --build
 ### Запуск всех тестов: бьютификации, статического анализа, интеграционного.
 
 ```
-docker compose exec tester sh ./run_tests
+docker compose exec tester sh ./run_tests.sh
 ```
 
 ### Запуск теста бьютификации.
 
 ```
-docker compose exec tester sh ./run_tests beautification
+docker compose exec tester sh ./run_tests.sh beautification
 ```
 
 ### Запуск теста статического анализа.
 
 ```
-docker compose exec tester sh ./run_tests static
+docker compose exec tester sh ./run_tests.sh static
 ```
 
 ### Запуск интеграционного теста.
 
 ```
-docker compose exec tester sh ./run_tests integration
+docker compose exec tester sh ./run_tests.sh integration
 ```
 
 ### Замечания:
