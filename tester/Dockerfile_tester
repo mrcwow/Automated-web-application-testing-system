@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
         python3=3.10.6-1~22.04.1 \
         python3-pip=22.0.2+dfsg-1ubuntu0.5 \
         git=1:2.34.1-1ubuntu1.12 \
-        openssh-server=1:8.9p1-3ubuntu0.11 \
+        openssh-server=1:8.9p1-3ubuntu0.13 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /run/sshd && \
